@@ -1,3 +1,5 @@
+package week1.Day4;
+
 import java.util.Scanner;
 
 public class Exercise_Loop {
@@ -34,11 +36,18 @@ public class Exercise_Loop {
         System.out.println("Answer 2");
 
         System.out.print("Input a string to reverse it: ");
-        String revString = input.nextLine();
+        String word = input.nextLine();
 
-        String reversed = new StringBuilder(revString).reverse().toString();
+        String reverse="";
+        char temp;
+        for(int i = (word.length()-1) ; i >= 0 ; i--){
 
-        System.out.println("Reverse string: " + reversed);
+            temp= word.charAt(i);
+            reverse = reverse + temp;
+
+        }
+
+        System.out.println("Reverse string: " + reverse);
 
 
         // 3.Write a program to find the factorial value of any number entered through the keyboard.
@@ -161,10 +170,18 @@ public class Exercise_Loop {
         input.nextLine();
 
 
-            System.out.print("enter a word to check if it a palindrome:");
-            String palindrome=input.nextLine();
+        System.out.print("enter a word to check if it a palindrome: ");
+        String palindrome=input.nextLine();
 
-            String reversedCheck = new StringBuilder(palindrome).reverse().toString();
+        String reversedCheck="";
+        char temp2;
+
+        for(int i = (palindrome.length()-1) ; i >= 0 ; i--){
+
+            temp2= palindrome.charAt(i);
+            reversedCheck = reversedCheck + temp2;
+
+        }
 
             if (palindrome.equals(reversedCheck))
                 System.out.println(palindrome + " is a palindrome\n");
